@@ -18,6 +18,11 @@ namespace DelegatePlayerStats
             
             Player.GetWinner(players, Player.GetTimePlayed);
 
+
+            Player.GetWinner(players, p => p.TimePlayed);
+            Player.GetWinner(players, p => p.HeadShots);
+            Player.GetWinner(players, p => p.TotalScore);
+
         }
     }
 }
