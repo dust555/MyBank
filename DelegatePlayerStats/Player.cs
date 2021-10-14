@@ -60,7 +60,7 @@ namespace DelegatePlayerStats
             foreach(Player p in playerlist){
                 if(getnum.Invoke(p) > max){
                     winner = p;
-                    max = p.TimePlayed;
+                    max = getnum.Invoke(p);
                 }
             }
 
