@@ -31,7 +31,7 @@
             </StackPanel>
             <Button Width="800" Name="PersonsOlderThanInput" Content="All persons older than 20" Margin="3"/>
             <StackPanel Orientation="horizontal">
-                <Button Width="700" Name="AllPersonsWithInputAge" Content="All persons older than 20:" Margin="3"/>
+                <Button Width="700" Name="AllPersonsWithInputAge" Content="All persons older than:" Margin="3"/>
                 <TextBox Name="ListProcessInputAge" Width="100"/>
             </StackPanel>
             <Button Width="800" Name="TotalAge" Content="Show messagebox: Total age of all persons older than 20" Margin="3"/>

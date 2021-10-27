@@ -1,0 +1,2 @@
+{"Id":0,"Name":"Pattatje","Kind":"Konijn"}
+{"Id":0,"Name":"Chanel","Kind":"Kat"}

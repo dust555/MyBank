@@ -1,0 +1,3 @@
+{"Id":1,"AnimalKind":"Cat","Name":"Cat Lucy"}
+{"Id":2,"AnimalKind":"Dog","Name":"Dog Boris"}
+{"Id":3,"AnimalKind":"Tiger","Name":"Tiger Emir"}
