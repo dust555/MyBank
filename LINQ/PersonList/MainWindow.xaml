@@ -1,0 +1,68 @@
+﻿<Window x:Class="PersonList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonList"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800">
+    <StackPanel Orientation="vertical">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Frist Name" Width="100"/>
+            <TextBox Name="FirstNameBox" Width="100" Text="{Binding firstname}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Last Name" Width="100"/>
+            <TextBox Name="LastNameBox" Width="100" Text="{Binding lastname}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Age" Width="100"/>
+            <TextBox Name="Age" Width="100" Text="{Binding age}"/>
+        </StackPanel>
+        <StackPanel Orientation="vertical">
+            <Button Width="800" Name="AddNameToList" Content="Add Person To List" Margin="3"/>
+            <Button Width="800" Name="SortListFirstName" Content="Sort List By FirstName" Margin="3"/>
+            <Button Width="800" Name="SortListLastName" Content="Sort List By LastName" Margin="3"/>
+            <Button Width="800" Name="SortListFisteLastName" Content="Sort List By FirstName, than by LastName" Margin="3"/>
+            <Button Width="800" Name="AllPersonsWithA" Content="All persons with an a in the name, sorted by FistName" Margin="3"/>
+            <StackPanel Orientation="horizontal">
+                <Button Width="700" Name="AllPersonsWithInput" Content="All persons with the following string in the name:" Margin="3"/>
+                <TextBox Name="ListProcessInput" Width="100" Text="{Binding Input}"/>
+            </StackPanel>
+            <Button Width="800" Name="PersonsOlderThan20" Content="All persons older than 20" Margin="3"/>
+            <StackPanel Orientation="horizontal">
+                <Button Width="700" Name="AllPersonsOlderThanInputAge" Content="All persons older than:" Margin="3"/>
+                <TextBox Name="ListProcessInputAge" Width="100" Text="{Binding InputAge}"/>
+            </StackPanel>
+            <Button Width="800" Name="TotalAge" Content="Show messagebox: Total age of all persons older than 20" Margin="3"/>
+            <Button Width="800" Name="AverageAge" Content="Show messagebox: Average age of all persons younger than 20 with an a in the name" Margin="3"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">   
+            <StackPanel Orientation="Vertical"> 
+                <Label Content="Full List"/>  
+                <ListView Width="400" ItemsSource="{Binding PersonList}">
+                    <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="FistName" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
+                                <GridViewColumn Header="LastName" Width="100"  DisplayMemberBinding="{Binding LastName}"/>
+                                <GridViewColumn Header="Age" Width="100"  DisplayMemberBinding="{Binding Age}"/>
+                            </GridView>
+                        </ListView.View>
+                </ListView>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"> 
+                <Label Content="Processed List"/>  
+                <ListView Width="400" ItemsSource="{Binding ProcessedPersonList}">
+                    <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="FistName" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
+                                <GridViewColumn Header="LastName" Width="100"  DisplayMemberBinding="{Binding LastName}"/>
+                                <GridViewColumn Header="Age" Width="100"  DisplayMemberBinding="{Binding Age}"/>
+                            </GridView>
+                        </ListView.View>
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
