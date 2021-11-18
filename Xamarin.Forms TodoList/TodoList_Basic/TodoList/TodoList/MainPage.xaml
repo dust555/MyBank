@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoList.MainPage">
+
+    <StackLayout>
+        <Button Text="Add Todo" Command="{Binding AddCommand}"/>
+        <Button Text="Edit Selected Todo" Command="{Binding EditCommand}"/>
+        <Button Text="Delete Selected Todo" Command="{Binding DeleteCommand}"/>
+        <Button Text="Refresh" Command="{Binding RefreshCommand}"/>
+        <ListView ItemsSource="{Binding TodoList}" SelectedItem="{Binding SelectedTodo}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Text}"/>
+                            <Label Text="{Binding Urgency}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
