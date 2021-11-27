@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,8 @@ namespace WPF
         Bank MyBank;
         public MainWindow()
         {
+            ConsoleTraceListener listener = new ConsoleTraceListener();
+            Trace.Listeners.Add(listener);
 
             MyBank = new Bank();
 
