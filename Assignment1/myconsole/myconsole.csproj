@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\01_person\01_person.csproj" />
+    <ProjectReference Include="..\02_multiply\02_multiply.csproj" />
+    <ProjectReference Include="..\03_operations\03_operations.csproj" />
+    <ProjectReference Include="..\04_longestword\04_longestword.csproj" />
+    <ProjectReference Include="..\05_stringlength\05_stringlength.csproj" />
+    <ProjectReference Include="..\06_printnumbers\06_printnumbers.csproj" />
+    <ProjectReference Include="..\07_prime\07_prime.csproj" />
+    <ProjectReference Include="..\08_rectangle\08_rectangle.csproj" />
+    <ProjectReference Include="..\09_fizzbuzz\09_fizzbuzz.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
